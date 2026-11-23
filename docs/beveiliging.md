@@ -15,6 +15,14 @@ Wat de app doet om je gegevens en inloggegevens te beschermen, en wat niemand ka
 - Kan een versleuteld bestand niet gelezen worden (bijvoorbeeld na een Windows-herinstallatie), dan staat de app als "niet ingelogd" en log je opnieuw in. Er gaat niets kapot en het bestand wordt niet verwijderd.
 - Inloggegevens staan nooit in `data.json`, nooit in OneDrive, nooit in Firebase en nooit op je gsm.
 
+## Mail
+- Postvakken en wachtwoorden staan in één versleuteld bestand (`mail.enc`). Mails worden alleen in het geheugen bewaard, nooit op schijf, en gaan nooit naar Firebase of de gsm.
+- **Alleen lezen** wordt op drie plekken afgedwongen: het Gmail-recht (`gmail.readonly`), postvakken die alleen-lezen worden geopend (IMAP `EXAMINE`, mails ophalen zonder ze als gelezen te markeren), en de server die elke wijziging voor zo'n postvak weigert. Bij een app-wachtwoord kan alleen de app dit bewaken: het wachtwoord zelf geeft de mailserver meer rechten.
+- **Verwijderen** verplaatst altijd naar de prullenbak. Er is geen definitief verwijderen.
+- Mail wordt als gewone tekst getoond: geen HTML, geen scripts, geen afbeeldingen van buitenaf (dus geen "leesbevestiging" via verborgen pixels). Links openen pas na bevestiging, met het echte adres zichtbaar.
+- Alleen TLS-verbindingen met gecontroleerde certificaten. Een testschakelaar voor de lokale testmailserver werkt niet in de echte app.
+- Foutmeldingen bevatten nooit een wachtwoord of token.
+
 ## Wat dit niet kan beschermen
 - Schadelijke software die **als jij** op je computer draait, kan Windows vragen de gegevens te ontsleutelen. Dat kan geen enkele app op een gewone pc voorkomen. Houd Windows bijgewerkt en installeer niets onbetrouwbaars.
 - De **updates** komen van GitHub. Wie schrijftoegang heeft tot de repository van de maker, kan een kwaadaardige update naar alle apparaten sturen. Voor de maker: zet **tweestapsverificatie of een passkey** op GitHub, gebruik een token met een korte looptijd en bewaar de ondertekeningssleutel van de gsm-app veilig. De installers zijn niet ondertekend met een betaald certificaat.
@@ -23,6 +31,7 @@ Wat de app doet om je gegevens en inloggegevens te beschermen, en wat niemand ka
 ## Tests
 ```powershell
 node tools/test-google.js    # inclusief weigeringen: geen sleutel, verkeerde host, vreemde herkomst, tekst/plain-aanval
+node tools/test-mail.js      # mail tegen een echte testmailserver (GreenMail) en een nep-Gmail: alleen-lezen blijft ongelezen, wijzigingen geweigerd, prullenbak in plaats van verwijderen
 C:\DashboardBuild\node_modules\electron\dist\electron.exe tools\test-vault.js   # versleuteling onder de echte Electron
 powershell -File tools\smoke-desktop.ps1                                         # het gebouwde programma in een geïsoleerde proefomgeving
 ```
