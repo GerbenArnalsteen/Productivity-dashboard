@@ -31,7 +31,7 @@ Bij elk postvak kies je **wat de app mag doen**:
 - **🔒 Alleen lezen:** de app kan je mail alleen bekijken. Er verandert niets in je postvak, ook niet of een mail "gelezen" is.
   - Bij Gmail krijgt de app dan alleen het recht `gmail.readonly` van Google.
   - Bij een app-wachtwoord opent de app je postvak alleen-lezen en weigert ze zelf elke wijziging.
-- **✎ Lezen en schrijven:** de app kan ook als gelezen of ongelezen markeren, archiveren en naar de **prullenbak** verplaatsen (nooit definitief verwijderen). Bij Gmail is dat het recht `gmail.modify`. **Mails versturen komt in een volgende versie.**
+- **✎ Lezen en schrijven:** de app kan ook als gelezen of ongelezen markeren, archiveren en naar de **prullenbak** verplaatsen (nooit definitief verwijderen). Je kunt ook **zelf mails schrijven en beantwoorden** (zie hieronder). Bij Gmail is dat het recht `gmail.modify`; dat recht omvat ook versturen, dus je hoeft niet opnieuw in te loggen.
 
 Je kunt dit later wijzigen via **Instellingen → Mail → Wijzig**. Bij Gmail betekent wijzigen: opnieuw inloggen, omdat het een toestemming bij Google is.
 
@@ -88,6 +88,26 @@ De app kan elke mail in één korte zin samenvatten en zeggen of je er iets mee 
 - Het model draait in een **eigen Ollama-proces** dat alleen op deze computer luistert, zonder je sleutels of wachtwoorden. De app stopt het na 20 minuten niets doen of als je de app sluit.
 - Met **Samenvattingen vergeten** en **AI stoppen** (in de instellingen) wis je het geheugen of stop je het model meteen.
 
+## Mail schrijven en beantwoorden
+Alleen bij postvakken met **✎ lezen en schrijven**.
+- Open een mail en kies **↩ Beantwoorden** of **↩↩ Allen beantwoorden**, of druk bovenaan op **✎ Nieuw** voor een nieuwe mail.
+- Aan, Cc en het onderwerp zijn al ingevuld. Je kunt ze nog aanpassen. Bij een antwoord kan de originele mail eronder staan (vinkje).
+- **Versturen** gaat in twee stappen: eerst zie je precies vanaf welk adres en naar wie de mail gaat, daarna druk je op **Ja, versturen**. De app verstuurt nooit zelf iets.
+- Bij Gmail komt een antwoord in hetzelfde gesprek en in je map *Verzonden*.
+- Bij andere postvakken (iCloud, Yahoo, school…) gaat versturen via de **uitgaande server (SMTP)** met hetzelfde app-wachtwoord. Voor iCloud, Yahoo en Gmail is die al ingevuld. Bij **Andere** vul je hem in via **Instellingen → Mail → Wijzig → Versturen** en druk je op **Testen en opslaan**. Alleen beveiligde poorten (465 of 587) zijn mogelijk.
+- De app zet een kopie in je map **Verzonden**. Zie je elke verzonden mail dubbel? Zet het vinkje *Een kopie in "Verzonden" zetten* dan uit.
+- **Bijlagen** kunnen nog niet.
+
+**✨ Concept van de AI** (als de AI aanstaat): typ in een paar woorden wat je wilt antwoorden ("ja, ik kom", "vraag een week uitstel") en druk op **Concept schrijven**. Het concept komt in het tekstvak. Lees het na en pas het aan: het model kan fouten maken. Het concept vult alleen de tekst in, niet de ontvangers of het onderwerp, en het verstuurt niets. Duurt ongeveer 4 tot 7 seconden (de eerste keer langer, terwijl het model laadt).
+
+Is een mail door de AI als **⚠️ verdacht** gemarkeerd, dan vraagt de app eerst of je toch wilt antwoorden. Stuur nooit wachtwoorden, codes of bankgegevens per mail.
+
+**Beveiliging bij versturen**
+- Het afzenderadres is altijd het adres van het postvak zelf. De pagina kan het niet veranderen.
+- Adressen en onderwerp worden gecontroleerd. Een regeleinde of een ongeldig adres wordt geweigerd, nooit stilletjes "verbeterd", zodat niemand extra ontvangers in de mail kan smokkelen.
+- Maximaal 50 ontvangers per mail en 20 mails per 10 minuten per postvak, als rem op een fout die anders veel mails zou versturen.
+- Een concept leeft alleen in het venster. Het wordt niet bewaard en niet gesynchroniseerd. Sluit je het venster met tekst erin, dan vraagt de app eerst of je die wilt weggooien.
+
 ## Wat er nog komt
-- Zelf antwoorden en versturen, met een optioneel concept van de AI. De app verstuurt nooit zelf iets.
+- Bijlagen meesturen.
 - Andere AI-keuzes (een eigen sleutel van een dienst), voor wie geen Ollama wil.
