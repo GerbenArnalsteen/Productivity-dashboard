@@ -11,10 +11,21 @@ Al je postvakken in één lijst, in het tabblad **Mail** (of in een Mail-widget 
 |---|---|
 | **Gmail** (aanbevolen) | Inloggen met Google in je browser. Geen wachtwoord in de app. |
 | **iCloud Mail** | E-mailadres + een **app-specifiek wachtwoord**: [uitleg van Apple](https://support.apple.com/nl-nl/102654) |
-| **Yahoo Mail** | E-mailadres + een **app-wachtwoord**: [uitleg van Yahoo](https://help.yahoo.com/kb/SLN15241.html) |
+| **Yahoo Mail** | E-mailadres + een **app-wachtwoord**: [uitleg van Yahoo](https://help.yahoo.com/kb/SLN15241.html). Zie hieronder als de optie ontbreekt. |
 | **Andere (IMAP)** | GMX, school, werk, eigen domein: e-mailadres, app-wachtwoord (of het wachtwoord dat je provider voor mail-apps geeft) en de IMAP-server (meestal poort 993). |
 | **Gmail met app-wachtwoord** | Alleen als inloggen met Google niet lukt: [app-wachtwoord maken](https://myaccount.google.com/apppasswords) (tweestapsverificatie moet aanstaan). |
 | **Outlook / Hotmail** | Niet beschikbaar: Microsoft vereist dat de maker de app registreert. Tip: stuur je Outlook-mail door naar een Gmail-adres (Outlook.com → Instellingen → E-mail → Doorsturen) en koppel dat. |
+
+### Yahoo: ik zie geen "app-wachtwoord maken"
+Yahoo toont die optie meestal pas als **tweestapsverificatie aanstaat**.
+1. Ga naar de accountbeveiliging van Yahoo (`login.yahoo.com/account/security`).
+2. Zet **Tweestapsverificatie** aan (je hebt een telefoonnummer nodig) en zorg dat je account een wachtwoord heeft (niet alleen "inloggen zonder wachtwoord").
+3. Daarna verschijnt **App-wachtwoord maken** (onder "Externe verbindingen"). Kies als naam bijvoorbeeld "Dashboard" en plak het wachtwoord van 16 tekens in de app.
+Bij een heel nieuw Yahoo-account kan het enkele dagen tot weken duren voor de optie verschijnt. Server: `imap.mail.yahoo.com`, poort 993 (staat al ingevuld).
+
+### Gmail: welke tabbladen zie je?
+Gmail sorteert je inbox in tabbladen: **Primair, Sociaal, Promoties, Updates, Forums**. De app toont standaard **alleen Primair**, zodat reclame en meldingen je echte mail niet bedelven. Het aantal ongelezen mails telt ook alleen wat je ziet.
+Je kiest welke tabbladen je ziet via **Instellingen → Mail → Wijzig** bij dat postvak. Heb je de tabbladen in Gmail zelf uitgezet, vink dan alles aan.
 
 Bij elk postvak kies je **wat de app mag doen**:
 - **🔒 Alleen lezen:** de app kan je mail alleen bekijken. Er verandert niets in je postvak, ook niet of een mail "gelezen" is.
