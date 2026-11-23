@@ -23,6 +23,7 @@ Een persoonlijke productiviteits-app voor werk en school, opgebouwd uit tabblade
 | Agenda-links (alleen lezen, ook voor Outlook) | [docs/agenda-links.md](docs/agenda-links.md) |
 | De gsm-app | [docs/gsm-app.md](docs/gsm-app.md) |
 | Synchroniseren tussen computer en gsm | [docs/synchroniseren-pc-gsm.md](docs/synchroniseren-pc-gsm.md) |
+| Beveiliging | [docs/beveiliging.md](docs/beveiliging.md) |
 | Problemen oplossen | [docs/problemen-oplossen.md](docs/problemen-oplossen.md) |
 | Updates en bouwen (voor de maker) | [docs/updates-en-bouwen.md](docs/updates-en-bouwen.md) |
 
@@ -30,7 +31,7 @@ In de app staan dezelfde handleidingen onder **Instellingen → Hulp en handleid
 
 ## Privacy en veiligheid
 - Je gegevens staan op je computer (`%APPDATA%\ProductivityDashboard\`) en, voor de gsm-synchronisatie, in **jouw eigen** Firebase-account. De regels laten alleen jou je eigen gegevens zien.
-- Inloggegevens voor Google staan alleen op je computer, buiten het dashboard-bestand en buiten OneDrive.
+- Inloggegevens voor Google staan alleen op je computer, **versleuteld met Windows**, buiten het dashboard-bestand en buiten OneDrive. De lokale server is alleen bereikbaar vanaf je eigen computer en alleen met een sleutel van de sessie. Zie [beveiliging](docs/beveiliging.md).
 - Er zijn geen advertenties, geen analyse en geen gebruiksstatistieken.
 - Volledige tekst: [privacybeleid](https://gerbenarnalsteen.github.io/Productivity-dashboard/privacy.html).
 
