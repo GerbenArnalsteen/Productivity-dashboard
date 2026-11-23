@@ -24,6 +24,9 @@ Wat de app doet om je gegevens en inloggegevens te beschermen, en wat niemand ka
 - Foutmeldingen bevatten nooit een wachtwoord of token.
 - **AI-samenvattingen:** de pagina stuurt alleen mail-id's. De server haalt de tekst zelf op, dus de pagina kan de AI geen eigen tekst of opdrachten voeren. De AI heeft geen enkele actie tot zijn beschikking, het antwoord wordt teruggebracht tot een korte tekst en een label, en opmaaktekens worden verwijderd. De AI draait in een eigen Ollama-proces op `127.0.0.1` met een willekeurige poort, dat **geen enkel geheim** van de app meekrijgt (geen sessiesleutel, geen GitHub-token). Het model mag alleen een gewone modelnaam zijn (geen registeradres of pad). Samenvattingen staan alleen in het geheugen.
 
+- Versturen kan alleen bij postvakken met "lezen en schrijven" en alleen na twee keer drukken (Versturen, dan Ja, versturen). Het afzenderadres bepaalt de server zelf; adressen en onderwerp met een regeleinde worden geweigerd (geen extra ontvangers smokkelen). Maximaal 50 ontvangers per mail en 20 mails per 10 minuten per postvak. SMTP alleen over TLS (poort 465 of 587, nooit 25), met certificaatcontrole.
+- Een AI-concept vult alleen het tekstvak. Het model kan geen ontvangers kiezen en niets versturen.
+
 ## Wat dit niet kan beschermen
 - Schadelijke software die **als jij** op je computer draait, kan Windows vragen de gegevens te ontsleutelen. Dat kan geen enkele app op een gewone pc voorkomen. Houd Windows bijgewerkt en installeer niets onbetrouwbaars.
 - De **updates** komen van GitHub. Wie schrijftoegang heeft tot de repository van de maker, kan een kwaadaardige update naar alle apparaten sturen. Voor de maker: zet **tweestapsverificatie of een passkey** op GitHub, gebruik een token met een korte looptijd en bewaar de ondertekeningssleutel van de gsm-app veilig. De installers zijn niet ondertekend met een betaald certificaat.
@@ -33,7 +36,7 @@ Wat de app doet om je gegevens en inloggegevens te beschermen, en wat niemand ka
 ```powershell
 node tools/test-google.js    # inclusief weigeringen: geen sleutel, verkeerde host, vreemde herkomst, tekst/plain-aanval
 node tools/test-ai.js        # AI-samenvattingen tegen een nep-Ollama: uit staat echt uit, de AI krijgt alleen wat de server zelf ophaalt, geen geheimen in de omgeving, cache, vreemde invoer
-node tools/test-mail.js      # mail tegen een echte testmailserver (GreenMail) en een nep-Gmail: alleen-lezen blijft ongelezen, wijzigingen geweigerd, prullenbak in plaats van verwijderen
+node tools/test-mail.js      # mail tegen een echte testmailserver (GreenMail) en een nep-Gmail: alleen-lezen blijft ongelezen, wijzigingen geweigerd, prullenbak in plaats van verwijderen, versturen (SMTP + nep-Gmail), geweigerde kopregels en de limieten
 C:\DashboardBuild\node_modules\electron\dist\electron.exe tools\test-vault.js   # versleuteling onder de echte Electron
 powershell -File tools\smoke-desktop.ps1                                         # het gebouwde programma in een geïsoleerde proefomgeving
 ```
