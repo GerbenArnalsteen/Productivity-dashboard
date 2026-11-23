@@ -5,7 +5,7 @@ Deze pagina beschrijft hoe nieuwe versies gebouwd en online gezet worden. Gewone
 ## Onderdelen
 | Onderdeel | Bestanden |
 |---|---|
-| Server (lokaal, zonder afhankelijkheden) | `server.js`, `google.js`, `outlook.js`, `ics.js`, `cloud.js` |
+| Server (lokaal, zonder afhankelijkheden) | `server.js`, `google.js`, `ics.js`, `cloud.js` |
 | Scherm (Nederlands/Engels) | `public/` (`index.html`, `app.js`, `style.css`, `i18n.js`) |
 | Computer-app (Electron) | `main.js`, `package.json` |
 | Gsm-app (Capacitor, Android) | project in `C:\AndroidBuild\app` (gebouwd uit `public/`) |
@@ -42,7 +42,6 @@ powershell -File tools\build-android.ps1 -Apk   # nieuwe apk (alleen als de app 
 ```powershell
 node tools/test-ics.js       # agenda-links
 node tools/test-google.js    # Google, met een nep-Google
-node tools/test-outlook.js   # Outlook, met een nep-Microsoft (inclusief zomer-/wintertijd)
 node tools/dev-test-server.js   # veilige testserver op poort 3300 voor in de browser
 ```
 De tests en de testserver gebruiken eigen tijdelijke bestanden en nep-diensten. Ze raken je echte gegevens, logins, agenda's en Firebase niet aan.
