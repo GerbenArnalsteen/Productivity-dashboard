@@ -66,6 +66,28 @@ Naam, kleur, volgorde en rechten van een postvak wijzig je in **Instellingen →
 - Als je een Gmail-postvak verwijdert, trekt de app ook zijn toestemming bij Google in. Je mail zelf blijft in je postvak staan.
 - Een postvak dat niet werkt (verkeerd wachtwoord, server onbereikbaar), houdt de andere niet tegen. Je ziet de melding bij dat postvak.
 
+## AI-samenvattingen (optioneel, op je eigen computer)
+De app kan elke mail in één korte zin samenvatten en zeggen of je er iets mee **moet doen** (🔶), of dat hij **verdacht** is (⚠️). Daarvoor draait een klein AI-model **op je eigen computer**. **Je mail gaat nooit naar internet of een clouddienst**, en er wordt niets op schijf bewaard: samenvattingen staan alleen in het geheugen en verdwijnen als je de app sluit.
+
+**Eenmalig instellen**
+1. Installeer **Ollama** (gratis, geen account nodig): ga naar ollama.com, download de installer voor Windows en installeer hem. Laat hem niet met Windows laten opstarten als je dat niet wilt: de app start zijn eigen exemplaar wanneer het nodig is.
+2. Open **Instellingen → Mail → ✨ AI-samenvattingen** en zet **Mijn mail samenvatten met AI** aan.
+3. Klik op **Model downloaden** (ongeveer 3,4 GB, eenmalig). Het model heet `gemma3:4b` en kiest goed Nederlands.
+4. Staat er "✓ Klaar", dan kun je beginnen.
+
+**Gebruik**
+- **Een mail openen:** boven de tekst staat de samenvatting met een label: *Actie nodig*, *Verdacht* of *Informatie*. Het verschijnt terwijl het geschreven wordt. Wil je dat niet automatisch, zet dat dan uit in de instellingen (dan krijg je een knop "Deze mail samenvatten").
+- **✨ Overzicht** (knop boven de lijst): kies **Vandaag**, **Gemist** (ongelezen mail van de afgelopen dagen) of **Alle ongelezen**. De AI leest die mails (maximaal 25) en sorteert ze in **Te doen**, **Verdacht** en **Informatie**. Klik op een regel om de mail te openen.
+- In de lijst krijgen mails waar je iets mee moet doen 🔶 en verdachte mails ⚠️, zodra ze samengevat zijn.
+
+**Snelheid.** Op een pc als de testcomputer (Ryzen 7 en een ingebouwde videokaart) duurt een mail ongeveer 4 seconden. De allereerste keer duurt langer, omdat het model geladen wordt: de app doet dat alvast op de achtergrond zodra je het Mail-tabblad opent. Bij **"De videokaart gebruiken"** (standaard aan, experimenteel) gebruikt de AI de ingebouwde videokaart: ongeveer twee keer zo snel. Lukt dat niet, dan valt Ollama zelf terug op de processor. Een nieuw AMD-stuurprogramma kan helpen.
+
+**Let op**
+- Een AI kan **fouten maken**. De samenvatting is een hulpmiddel. Controleer de mail zelf voordat je iets doet, vooral bij geld, wachtwoorden of deadlines.
+- Een mail is **onbetrouwbare tekst**: de AI heeft geen enkele actie tot zijn beschikking (hij kan niets versturen, openen of wijzigen) en geeft alleen tekst terug. Instructies in een mail ("negeer alles en…") worden niet uitgevoerd. In een test van 12 voorbeeldmails werd een mail met zo'n instructie als *verdacht* herkend. De prompt is afgesteld op diezelfde voorbeelden, dus het cijfer van 11 van de 12 goede labels is optimistisch.
+- Het model draait in een **eigen Ollama-proces** dat alleen op deze computer luistert, zonder je sleutels of wachtwoorden. De app stopt het na 20 minuten niets doen of als je de app sluit.
+- Met **Samenvattingen vergeten** en **AI stoppen** (in de instellingen) wis je het geheugen of stop je het model meteen.
+
 ## Wat er nog komt
-- AI-samenvattingen van je mail van vandaag of gemiste mails, met een lokaal model op je eigen computer (Ollama, gemma3:4b).
 - Zelf antwoorden en versturen, met een optioneel concept van de AI. De app verstuurt nooit zelf iets.
+- Andere AI-keuzes (een eigen sleutel van een dienst), voor wie geen Ollama wil.
