@@ -22,6 +22,7 @@ Wat de app doet om je gegevens en inloggegevens te beschermen, en wat niemand ka
 - Mail wordt als gewone tekst getoond: geen HTML, geen scripts, geen afbeeldingen van buitenaf (dus geen "leesbevestiging" via verborgen pixels). Links openen pas na bevestiging, met het echte adres zichtbaar.
 - Alleen TLS-verbindingen met gecontroleerde certificaten. Een testschakelaar voor de lokale testmailserver werkt niet in de echte app.
 - Foutmeldingen bevatten nooit een wachtwoord of token.
+- **AI-samenvattingen:** de pagina stuurt alleen mail-id's. De server haalt de tekst zelf op, dus de pagina kan de AI geen eigen tekst of opdrachten voeren. De AI heeft geen enkele actie tot zijn beschikking, het antwoord wordt teruggebracht tot een korte tekst en een label, en opmaaktekens worden verwijderd. De AI draait in een eigen Ollama-proces op `127.0.0.1` met een willekeurige poort, dat **geen enkel geheim** van de app meekrijgt (geen sessiesleutel, geen GitHub-token). Het model mag alleen een gewone modelnaam zijn (geen registeradres of pad). Samenvattingen staan alleen in het geheugen.
 
 ## Wat dit niet kan beschermen
 - Schadelijke software die **als jij** op je computer draait, kan Windows vragen de gegevens te ontsleutelen. Dat kan geen enkele app op een gewone pc voorkomen. Houd Windows bijgewerkt en installeer niets onbetrouwbaars.
@@ -31,6 +32,7 @@ Wat de app doet om je gegevens en inloggegevens te beschermen, en wat niemand ka
 ## Tests
 ```powershell
 node tools/test-google.js    # inclusief weigeringen: geen sleutel, verkeerde host, vreemde herkomst, tekst/plain-aanval
+node tools/test-ai.js        # AI-samenvattingen tegen een nep-Ollama: uit staat echt uit, de AI krijgt alleen wat de server zelf ophaalt, geen geheimen in de omgeving, cache, vreemde invoer
 node tools/test-mail.js      # mail tegen een echte testmailserver (GreenMail) en een nep-Gmail: alleen-lezen blijft ongelezen, wijzigingen geweigerd, prullenbak in plaats van verwijderen
 C:\DashboardBuild\node_modules\electron\dist\electron.exe tools\test-vault.js   # versleuteling onder de echte Electron
 powershell -File tools\smoke-desktop.ps1                                         # het gebouwde programma in een geïsoleerde proefomgeving
