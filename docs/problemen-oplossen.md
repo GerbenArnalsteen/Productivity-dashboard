@@ -38,6 +38,10 @@
 ## Overig
 **De app start niet / poort bezet.** De app zoekt zelf een vrije poort (3000 en hoger). Sluit andere kopieën van het dashboard.
 
+**Na een Windows-herinstallatie of op een andere computer staat Google opeens uitgelogd.** Je logins zijn versleuteld met je Windows-gebruiker en dus niet over te zetten. Log gewoon opnieuw in. Je gegevens (`data.json`) en de gsm-synchronisatie komen mee.
+
+**`node server.js` doet niets en geeft een melding.** Dat is bedoeld: een losse kopie van de server zou je echte gegevens kunnen lezen. Start de geïnstalleerde app. De oude snelkoppelingen `start.bat`, `Dashboard.vbs` en `Stop Dashboard.bat` bestaan niet meer.
+
 **Ik wil mijn gegevens terugzetten.** Kopieer een reservekopie van `data.json` terug naar `%APPDATA%\ProductivityDashboard\` terwijl de app gesloten is. Bij het eerste koppelen met sync wordt ook een `data.before-sync-….json` bewaard.
 
 **Alles opnieuw beginnen.** Sluit de app en verwijder de map `%APPDATA%\ProductivityDashboard\`. Verwijder je ook je gegevens in Firebase niet, dan komen ze bij het volgende inloggen terug.
