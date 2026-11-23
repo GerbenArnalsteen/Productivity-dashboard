@@ -14,8 +14,8 @@ In `%APPDATA%\ProductivityDashboard\`:
 | Bestand | Inhoud |
 |---|---|
 | `data.json` | je dashboard (to-do's, notities, rooster, instellingen, ...) |
-| `google.json` | je koppeling met Google |
-| `cloud.json` | je koppeling met de gsm-synchronisatie |
+| `google.enc` | je koppeling met Google (versleuteld met Windows) |
+| `cloud.enc` | je koppeling met de gsm-synchronisatie (versleuteld met Windows) |
 
 Deze bestanden staan niet in OneDrive. Wil je een reservekopie, kopieer dan `data.json`.
 
