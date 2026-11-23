@@ -14,7 +14,7 @@ In `%APPDATA%\ProductivityDashboard\`:
 | Bestand | Inhoud |
 |---|---|
 | `data.json` | je dashboard (to-do's, notities, rooster, instellingen, ...) |
-| `google.json`, `outlook.json` | je koppelingen met Google en Outlook |
+| `google.json` | je koppeling met Google |
 | `cloud.json` | je koppeling met de gsm-synchronisatie |
 
 Deze bestanden staan niet in OneDrive. Wil je een reservekopie, kopieer dan `data.json`.
@@ -24,5 +24,5 @@ Windows-instellingen → Apps → My Dashboard → Verwijderen. Je gegevens in `
 
 ## Volgende stappen
 - [Google Agenda koppelen](google-agenda-koppelen.md)
-- [Outlook-agenda koppelen](outlook-agenda-koppelen.md)
+- [Outlook-agenda tonen (link)](agenda-links.md)
 - [De gsm-app installeren](gsm-app.md)
