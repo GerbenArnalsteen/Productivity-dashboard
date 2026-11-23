@@ -43,6 +43,8 @@ powershell -File tools\build-android.ps1 -Apk   # nieuwe apk (alleen als de app 
 node tools/test-ics.js       # agenda-links
 node tools/test-google.js    # Google, met een nep-Google
 node tools/dev-test-server.js   # veilige testserver op poort 3300 voor in de browser
+C:\DashboardBuild\node_modules\electron\dist\electron.exe tools\test-vault.js   # versleuteling van logins, onder de echte Electron
+powershell -File tools\smoke-desktop.ps1   # het gebouwde programma starten en controleren (draait bij elke release vanzelf)
 ```
 De tests en de testserver gebruiken eigen tijdelijke bestanden en nep-diensten. Ze raken je echte gegevens, logins, agenda's en Firebase niet aan.
 
