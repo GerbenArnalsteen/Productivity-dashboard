@@ -4,7 +4,7 @@
 Je gegevens worden bewaard in **Firebase** (Cloud Firestore, een dienst van Google), in jouw eigen account. Er is geen ander centraal systeem.
 
 - `users/{jouw-id}/dash/main`: je hele dashboard (to-do's, notities, rooster, instellingen, ...).
-- `users/{jouw-id}/dash/ext`: een **alleen-lezen kopie** van je komende afspraken (ongeveer 4 maanden vooruit, uit Google, Outlook en agenda-links), voor de gsm. De gsm kan die diensten zelf niet bereiken. De kopie bevat geen afspraak-ID's, zodat hij klein blijft.
+- `users/{jouw-id}/dash/ext`: een **alleen-lezen kopie** van je komende afspraken (ongeveer 4 maanden vooruit, uit Google en je agenda-links), voor de gsm. De gsm kan die diensten zelf niet bereiken. De kopie bevat geen afspraak-ID's, zodat hij klein blijft.
 
 De computer-app meldt zich bij Firebase aan met het Google-account dat je bij de Google-koppeling gebruikte. De gsm doet dat met de accountkiezer van Android. De regels in Firestore zorgen ervoor dat **alleen jij** je eigen gegevens kunt lezen en schrijven.
 
