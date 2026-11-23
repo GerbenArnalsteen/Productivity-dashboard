@@ -7,6 +7,7 @@ Een persoonlijke productiviteits-app voor werk en school, opgebouwd uit tabblade
 - **Rooster** met eigen kleuren (palet), overlappende lessen naast elkaar, meerdere dagen tegelijk invoeren.
 - **Agenda die twee kanten op synchroniseert** met **Google Agenda** (ook Samsung Agenda via je Google-account). Afspraken toevoegen, wijzigen en verwijderen in het dashboard komt ook in je agenda terecht.
 - **Agenda-links** (alleen lezen) voor Outlook, iPhone/iCloud en andere diensten.
+- **Mail**: zoveel postvakken als je wilt (Gmail, iCloud, Yahoo, school, werk) in één lijst, per postvak "alleen lezen" of "lezen en schrijven", postvakken tonen of verbergen, en een weergave die je zelf instelt. Alleen op je computer.
 - **Synchronisatie tussen computer en gsm** via je eigen account, ook als de computer uit staat.
 - **Eigen indeling voor je gsm**: andere volgorde van widgets, en widgets verbergen.
 - **Automatische updates** op computer en gsm.
@@ -20,6 +21,7 @@ Een persoonlijke productiviteits-app voor werk en school, opgebouwd uit tabblade
 |---|---|
 | De app op je computer installeren | [docs/installeren-pc.md](docs/installeren-pc.md) |
 | Google Agenda koppelen (twee richtingen) | [docs/google-agenda-koppelen.md](docs/google-agenda-koppelen.md) |
+| Mail koppelen en gebruiken | [docs/mail.md](docs/mail.md) |
 | Agenda-links (alleen lezen, ook voor Outlook) | [docs/agenda-links.md](docs/agenda-links.md) |
 | De gsm-app | [docs/gsm-app.md](docs/gsm-app.md) |
 | Synchroniseren tussen computer en gsm | [docs/synchroniseren-pc-gsm.md](docs/synchroniseren-pc-gsm.md) |
