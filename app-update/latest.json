@@ -1,7 +1,7 @@
 {
-    "web":  9,
-    "zip":  "https://gerbenarnalsteen.github.io/Productivity-dashboard/app-update/web-9.zip",
-    "checksum":  "4f17737d4c94746ba0b00853a079e15f1fc114966c459363333c59f12cfa4993",
+    "web":  10,
+    "zip":  "https://gerbenarnalsteen.github.io/Productivity-dashboard/app-update/web-10.zip",
+    "checksum":  "a4796e9a8aeb809901db350e4b15dc1d7fd4ed16b0b21505e387473a55907f31",
     "apk":  3,
     "apkUrl":  "https://github.com/GerbenArnalsteen/Productivity-dashboard/releases/download/android-3/My-Dashboard-3.apk"
 }
