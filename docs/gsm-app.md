@@ -13,7 +13,7 @@ De gsm-app toont hetzelfde dashboard, met je to-do's, notities, rooster, deadlin
 
 ## Wat werkt, wat niet
 - **Wel:** to-do's, notities (meerdere), deadlines, rooster, gewoontes, links, focustimer en alle andere widgets. Aanpassingen synchroniseren.
-- **Alleen bekijken:** afspraken uit Google Agenda en Outlook. Die komen van je computer (ongeveer elke 10 minuten bijgewerkt, zolang de computer aanstaat) en zijn op de gsm niet te wijzigen. Voeg afspraken toe in de agenda-app van je gsm: die staan dan in Google of Outlook en je computer ziet ze vanzelf.
+- **Alleen bekijken:** afspraken uit Google Agenda en je agenda-links. Die komen van je computer (ongeveer elke 10 minuten bijgewerkt, zolang de computer aanstaat) en zijn op de gsm niet te wijzigen. Voeg afspraken toe in de agenda-app van je gsm: die staan dan in Google en je computer ziet ze vanzelf.
 - **Eigen indeling:** in de aanpasmodus (✨) pas je de volgorde van widgets en wat zichtbaar is apart voor je gsm aan. De indeling op je computer verandert daardoor niet.
 
 ## Updates
