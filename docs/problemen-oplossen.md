@@ -18,16 +18,8 @@
 
 **Afspraken verschijnen niet.** Controleer in het Google-tabblad of de agenda is aangevinkt. Klik op *Nu verversen*. Wijzigingen op je gsm komen binnen ongeveer 2 minuten binnen.
 
-## Outlook
-**Geen toestemming / "beheerder nodig" (AADSTS65001 of vergelijkbaar).** Je school of werk blokkeert het koppelen van apps. Gebruik de [agenda-link](agenda-links.md) (alleen lezen), of vraag je beheerder.
-
-**"Dat lijkt niet op een Toepassings-ID".** Het ID heeft 36 tekens met streepjes. Gebruik de *Toepassings-ID (client)*, niet de map-ID of een geheim.
-
-**Inloggen lukt, maar de app meldt een fout bij de omleiding.** Controleer dat de omleidings-URI `http://localhost` is, met als platform *Openbare client/native (mobiel en desktop)*, niet *Web*.
-
-**"Dit Microsoft-account heeft geen Outlook-agenda die apps kunnen gebruiken".** Sommige accounts hebben geen bruikbare mailbox. Gebruik de [agenda-link](agenda-links.md).
-
-**Je Outlook-login is verlopen.** Log in Instellingen → Agenda's → Outlook opnieuw in.
+## Outlook-agenda
+**Mijn Outlook-afspraken worden niet bijgewerkt.** Outlook wordt via een alleen-lezen link getoond en vernieuwt elke 15 minuten. Zie [agenda-links](agenda-links.md).
 
 ## Synchroniseren met de gsm
 **Op de computer staat geen ✓ onder "Synchroniseren met je gsm".** Log opnieuw in via het Google-tabblad (eenmalig, de app heeft ook je e-mailadres nodig). Staat er "Nu geen verbinding", controleer dan je internet.
