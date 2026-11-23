@@ -1,6 +1,6 @@
 # Agenda's koppelen met een link (alleen lezen)
 
-Geen twee-richtingen-koppeling nodig of mogelijk (bijvoorbeeld omdat je school of werk Outlook blokkeert)? Dan kun je een agenda tonen met zijn **.ics-link**. Afspraken verschijnen in het dashboard, maar je kunt ze daar niet aanpassen. Ze worden elke 15 minuten bijgewerkt.
+Zo toon je ook je **Outlook-, Hotmail- of Microsoft 365-agenda**: de app heeft geen twee-richtingen-koppeling met Microsoft, maar wel deze link. Het werkt voor elke agenda met een **.ics-link**. Afspraken verschijnen in het dashboard, maar je kunt ze daar niet aanpassen. Ze worden elke 15 minuten bijgewerkt.
 
 **Instellingen → Agenda's → tabblad "Andere agenda's (alleen lezen)"**: kies je dienst (Google, iPhone/iCloud, Outlook, Samsung of Anders), volg de korte stappen om de link te vinden, plak hem en klik op **Koppelen**.
 
@@ -13,6 +13,6 @@ Geen twee-richtingen-koppeling nodig of mogelijk (bijvoorbeeld omdat je school o
 | Anders | Elke link die eindigt op `.ics` of begint met `webcal://` |
 
 Tips:
-- Is de agenda al twee kanten op gekoppeld (Google of Outlook), dan zou hij dubbel verschijnen. Het dashboard waarschuwt je daarvoor.
+- Is de agenda al twee kanten op gekoppeld (Google), dan zou hij dubbel verschijnen. Het dashboard waarschuwt je daarvoor.
 - Je kunt maximaal 12 agenda-links toevoegen.
 - Links staan in het dashboard-bestand op je computer. Behandel een "geheime" link als een wachtwoord.
