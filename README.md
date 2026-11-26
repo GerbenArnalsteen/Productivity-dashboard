@@ -9,6 +9,7 @@ Een persoonlijke productiviteits-app voor werk en school, opgebouwd uit tabblade
 - **Agenda-links** (alleen lezen) voor Outlook, iPhone/iCloud en andere diensten.
 - **Mail**: zoveel postvakken als je wilt (Gmail, iCloud, Yahoo, school, werk) in één lijst, per postvak "alleen lezen" of "lezen en schrijven", postvakken tonen of verbergen, en een weergave die je zelf instelt. Mails schrijven en beantwoorden (alleen bij "lezen en schrijven", altijd met bevestiging), optioneel met een concept van de lokale AI. Alleen op je computer.
 - **AI-samenvattingen van je mail** (optioneel): elke mail in één zin, met een label "actie nodig", "verdacht" of "informatie", en een overzicht van vandaag of van gemiste mail. Een klein model draait op je eigen computer: je mail gaat niet naar de cloud.
+- **Zoeken in alles (Ctrl+K)** met snelle opdrachten zoals `taak: … morgen`, een **Vandaag-overzicht** (lessen, afspraken, deadlines van de week, mail die actie vraagt), **taken en deadlines uit een mail**, **Windows-meldingen** voor deadlines, taken, afspraken en lessen, en **bijlagen** opslaan en meesturen. Zie [docs/handig.md](docs/handig.md).
 - **Synchronisatie tussen computer en gsm** via je eigen account, ook als de computer uit staat.
 - **Eigen indeling voor je gsm**: andere volgorde van widgets, en widgets verbergen.
 - **Automatische updates** op computer en gsm.
