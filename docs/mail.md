@@ -96,7 +96,7 @@ Alleen bij postvakken met **✎ lezen en schrijven**.
 - Bij Gmail komt een antwoord in hetzelfde gesprek en in je map *Verzonden*.
 - Bij andere postvakken (iCloud, Yahoo, school…) gaat versturen via de **uitgaande server (SMTP)** met hetzelfde app-wachtwoord. Voor iCloud, Yahoo en Gmail is die al ingevuld. Bij **Andere** vul je hem in via **Instellingen → Mail → Wijzig → Versturen** en druk je op **Testen en opslaan**. Alleen beveiligde poorten (465 of 587) zijn mogelijk.
 - De app zet een kopie in je map **Verzonden**. Zie je elke verzonden mail dubbel? Zet het vinkje *Een kopie in "Verzonden" zetten* dan uit.
-- **Bijlagen** kunnen nog niet.
+- **Bijlagen** meesturen: **📎 Bijlage toevoegen** of bestanden op het venster slepen (max. 10, samen 20 MB). Opslaan: klik op een bijlage in een mail. Zie [Handige functies](handig.md#-bijlagen).
 
 **✨ Concept van de AI** (als de AI aanstaat): typ in een paar woorden wat je wilt antwoorden ("ja, ik kom", "vraag een week uitstel") en druk op **Concept schrijven**. Het concept komt in het tekstvak. Lees het na en pas het aan: het model kan fouten maken. Het concept vult alleen de tekst in, niet de ontvangers of het onderwerp, en het verstuurt niets. Duurt ongeveer 4 tot 7 seconden (de eerste keer langer, terwijl het model laadt).
 
@@ -109,5 +109,5 @@ Is een mail door de AI als **⚠️ verdacht** gemarkeerd, dan vraagt de app eer
 - Een concept leeft alleen in het venster. Het wordt niet bewaard en niet gesynchroniseerd. Sluit je het venster met tekst erin, dan vraagt de app eerst of je die wilt weggooien.
 
 ## Wat er nog komt
-- Bijlagen meesturen.
+- Zoeken in de hele mailbox en andere mappen dan het postvak IN.
 - Andere AI-keuzes (een eigen sleutel van een dienst), voor wie geen Ollama wil.
