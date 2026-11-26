@@ -25,6 +25,8 @@ Wat de app doet om je gegevens en inloggegevens te beschermen, en wat niemand ka
 - **AI-samenvattingen:** de pagina stuurt alleen mail-id's. De server haalt de tekst zelf op, dus de pagina kan de AI geen eigen tekst of opdrachten voeren. De AI heeft geen enkele actie tot zijn beschikking, het antwoord wordt teruggebracht tot een korte tekst en een label, en opmaaktekens worden verwijderd. De AI draait in een eigen Ollama-proces op `127.0.0.1` met een willekeurige poort, dat **geen enkel geheim** van de app meekrijgt (geen sessiesleutel, geen GitHub-token). Het model mag alleen een gewone modelnaam zijn (geen registeradres of pad). Samenvattingen staan alleen in het geheugen.
 
 - Versturen kan alleen bij postvakken met "lezen en schrijven" en alleen na twee keer drukken (Versturen, dan Ja, versturen). Het afzenderadres bepaalt de server zelf; adressen en onderwerp met een regeleinde worden geweigerd (geen extra ontvangers smokkelen). Maximaal 50 ontvangers per mail en 20 mails per 10 minuten per postvak. SMTP alleen over TLS (poort 465 of 587, nooit 25), met certificaatcontrole.
+- Bijlagen: opslaan is altijd een download (nooit in de app geopend), met een opgeschoonde bestandsnaam en een waarschuwing bij programma's, macrobestanden en verdachte mails. Meesturen: eerst naar het geheugen van de app (max. 10 bestanden, 20 MB, gekoppeld aan één postvak, na 30 minuten of na het versturen weg).
+- Meldingen: alleen op de computer. Welke al verschenen, staat alleen in de browseropslag van de app (niet gesynchroniseerd).
 - Een AI-concept vult alleen het tekstvak. Het model kan geen ontvangers kiezen en niets versturen.
 
 ## Wat dit niet kan beschermen
